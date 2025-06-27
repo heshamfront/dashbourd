@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الطالب | مستر رياضة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- صفحة تسجيل الدخول -->
+  <div id="loginPage" class="login-page">
+    <form id="loginForm" class="login-form">
+      <h2>تسجيل الدخول للطلاب</h2>
+      <label>اسم الطالب:
+        <input type="text" id="loginStudentName" required placeholder="أدخل اسمك">
+      </label>
+      <label>البريد الإلكتروني:
+        <input type="email" id="loginEmail" required placeholder="student@email.com">
+      </label>
+      <label>كلمة المرور:
+        <input type="password" id="loginPassword" required placeholder="********">
+      </label>
+      <button type="submit">دخول</button>
+    </form>
+  </div>
+
+  <!-- لوحة الطالب -->
+  <div id="dashboard" style="display:none;">
+    <header>
+      <h1>لوحة الطالب - مستر رياضة</h1>
+      <div class="student-settings">
+        <button id="settingsBtn">الإعدادات</button>
+      </div>
+    </header>
+    <main>
+      <div id="welcomeMsg" class="welcome-msg"></div>
+      <section class="courses-year">
+        <h2>كورسات السنة الدراسية</h2>
+        <ul id="yearCourses">
+          <!-- سيتم تعبئتها من جافاسكريبت -->
+        </ul>
+      </section>
+      <section class="courses-enrolled">
+        <h2>كورسات مشترك بها</h2>
+        <ul id="enrolledCourses">
+          <!-- سيتم تعبئتها من جافاسكريبت -->
+        </ul>
+      </section>
+      <section class="attendance">
+        <h2>الحضور والغياب</h2>
+        <div class="attendance-stats">
+          <div>نسبة الحضور: <span id="attendancePercent">--</span>%</div>
+          <div>نسبة الغياب: <span id="absencePercent">--</span>%</div>
+        </div>
+      </section>
+    </main>
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeSettings">&times;</span>
+        <h2>إعدادات الطالب</h2>
+        <form id="settingsForm">
+          <label>اسم الطالب:<input type="text" id="studentName" value="أحمد محمد"></label><br>
+          <label>البريد الإلكتروني:<input type="email" id="studentEmail" value="student@email.com"></label><br>
+          <button type="submit">حفظ التغييرات</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
